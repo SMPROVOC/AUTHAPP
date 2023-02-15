@@ -1,6 +1,12 @@
+from pydantic import BaseModel
 from typing import Optional
 
-from pydantic import BaseModel
+class ShowGreeting(BaseModel):
+    greeting: str
+
+    class Config():
+        orm_mode = True
+
 
 class User(BaseModel):
     name: str
@@ -10,22 +16,21 @@ class User(BaseModel):
     is_enabled: str
     otp: str
 
+
+class UserRegistration(BaseModel):
+    First_Name: str
+    Last_Name: str
+    Gender: str
+    DOB: str
+    Email: str
+    Cell_Number: str
+    Password: str
+
+
 class Token(BaseModel):
     access_token: str
     token_type: str
 
+
 class TokenData(BaseModel):
-    token_otp: Optional[str] = None
-
-class OtpRequest(BaseModel):
-    username: str
-    password: str
-
-
-class RegisterUser(BaseModel):
-    name: str
-    surname: str
-    email: str
-    password: str
-    password_confirmation: str
-
+    token_info: Optional[str] = None

@@ -1,0 +1,160 @@
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Item Details</title>-->
+<!--    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Item ID: {{ id }}</h1>-->
+<!--</body>-->
+<!--</html>-->
+
+<html>
+      <head>
+        <style type="text/css">
+            .container
+            {
+                /* background: #FF6D06; */
+                 width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container-center-div{
+                background: #363636;
+                width: 80%;
+                height: 80%;
+                border-radius: 8px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column;
+            }
+            .logo-div{
+                background: #363636;
+                width: 100%;
+                height: 30%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:aliceblue;
+            }
+
+            .container-body{
+                /* background: blue; */
+                width: 90%;
+                height: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                flex-flow: column;
+                color:aliceblue;
+            }
+            .container-body-top{
+                /* background: orange; */
+                width: 100%;
+                height: 20%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:aliceblue;
+            }
+            .container-body-center p{
+                /* background: green; */
+                width: 100%;
+            }
+            .container-body-center{
+                /* background: green; */
+                width: 100%;
+                height: 40%;
+                text-align: center;
+                display: flex;
+                flex-flow: column;
+                color:aliceblue;
+            }
+            .container-body-bottom{
+                /* background: pink; */
+                width: 100%;
+                height: 40%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:aliceblue;
+            }
+            .confirm-btn{
+                background: green;
+                width: 100px;
+                height: 30px;
+                color:aliceblue;
+                border-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+            }
+            .reject-btn{
+                background: red;
+                width: 100px;
+                height: 30px;
+                color:aliceblue;
+                border-style: none;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+            }
+            .spacer{
+                width: 30%;
+                height: 30px;
+
+            }
+
+            .notification-list{
+
+                display: flex;
+                flex-flow: column;
+
+            }
+            </style>
+      </head>
+      <body>
+        <div class="container">
+            <div class="container-center-div">
+                <div class="logo-div">
+                    <h1>AUTHER</h1>
+                </div>
+                <div class="container-body">
+                    <div class="container-body-top">
+                        <h3>Hey {{username}}!</h3>
+                    </div>
+                    <div class="container-body-center">
+                        <p><b>Your profile has now been successfully verified.</b></p>
+                        <p>Here is a brief description of your account:</p>
+
+                        <p><b>NOTIFICATIONS</b></p>
+                        <div class="notification-list">
+                            <div>Text message: Disabled</div>
+                            <div>Whatsapp: Enabled</div>
+                            <div>Email: Enabled</div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="container-body-bottom">
+                        <div>These settings can be changed any time via the AUTHER app.</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+      </body>
+    </html>
